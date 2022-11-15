@@ -243,11 +243,13 @@
     /*-----------------------------
       loading before open page
     -----------------------------*/
+    // ignoring useless stuff
     // Fakes the loading setting a timeout
-    setTimeout(function () {
-      $('body').addClass('loaded_page');
-    }, 3000);
-
+    // setTimeout(function () {
+    //   $('body').addClass('loaded_page');
+    // }, 3000);
+    
+    $('body').addClass('loaded_page');
     /*-----------------------------
       Back to top with progress indicator
     -----------------------------*/
