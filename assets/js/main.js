@@ -98,7 +98,7 @@
 
       $.ajax({
         type: "POST",
-        url: "http://localhost:1234/v0/messages",
+        url: "https://api.sebastiani.io/v0/messages",
         data: JSON.stringify({
           address,
           full_name,
