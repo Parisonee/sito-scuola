@@ -89,7 +89,6 @@
 
               </ul>
               <div class="nav_account btn_demo3">
-               
                 <a href="#Testimonial" class="btn scale btn_sm_primary bg-blue c-white effect-letter rounded-pill">
                   Contattaci
                 </a>
@@ -461,6 +460,10 @@
                           Risoluzione problematiche tecniche 
                         </li>                   
                       </ul>
+
+                      <a href="#Testimonial" class="btn scale btn_sm_primary bg-blue c-white effect-letter rounded-pill">
+                        Contattaci
+                      </a>
                       <a href="#Testimonial" class="btn scale btn_sm_primary bg-yollow c-white effect-letter rounded-pill">
                         Contattaci
                       </a>
@@ -717,13 +720,13 @@
               </div>
 
               <div class="col-lg-4 ml-md-auto my-auto">
-                <form action="" class="row form_contact_two">
-                  <input type="hidden" name="site_name" value="sito-scuola.cloud" />
+                <form id="contact-form" class="row form_contact_two">
+                  <input type="hidden" name="site_name" value="sito-scuola.cloud" class="form-control" />
                   <div class="col-12">
                     <div class="form-group">
                       <label>e-mail</label>
                       <div class="input_group">
-                        <input type="address" class="form-control" placeholder="es. mario@mail.com">
+                        <input name="address" type="email" class="form-control" placeholder="es. mario@mail.com" required>
                         <i class="tio online"></i>
                       </div>
                     </div>
@@ -732,7 +735,7 @@
                     <div class="form-group">
                       <label>Nome completo</label>
                       <div class="input_group">
-                        <input name="full_name" type="text" class="form-control" placeholder="es. Mario Rossi">
+                        <input name="full_name" type="text" class="form-control" placeholder="es. Mario Rossi" required>
                         <i class="tio account_square_outlined"></i>
                       </div>
 
@@ -742,17 +745,17 @@
                   <div class="col-12">
                     <div class="form-group">
                       <label>Messaggio</label>
-                      <textarea class="form-control" rows="5" placeholder="Scrivi il tuo messaggio qui..."></textarea>
+                      <textarea name="message" class="form-control" rows="5" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
                     </div>
                   </div>
 
                   <div class="col-12 d-md-flex justify-content-end margin-t-2">
-                    <a href="#" class="btn mt-3 rounded-pill btn_sm_primary c-white effect-letter bg-blue">
+                    <button type="submit" class="btn mt-3 rounded-pill btn_sm_primary c-white bg-blue">
                       <div class="inside_item">
                         <span data-hover="Ciao 🖐">Invia Messaggio</span>
                       </div>
 
-                    </a>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -782,8 +785,9 @@
       </svg>
     </div>
 
-    <!-- Tosts -->
+    <!-- Toasts -->
     <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
+      <!-- PNRR mepa Toast -->
       <div class="toast toast_demo" id="myTost" role="alert" aria-live="assertive" aria-atomic="true"
         data-animation="true" data-autohide="false">
         <div class="toast-body">
@@ -792,6 +796,17 @@
           </button>
           <h5>Ciao 👋</h5>
           <p>Affidati a noi, contattaci su <a href="https://www.acquistinretepa.it" target="_blank">mepa</a> utilizzando il codice <strong>scuolapnrr141</strong></p>
+        </div>
+      </div>
+      <!-- Form notification Toast -->
+      <div class="toast toast_demo" id="formToast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-animation="true" data-autohide="false">
+        <div class="toast-body">
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <i class="tio clear"></i>
+          </button>
+          <h5 id="formToastTitle"></h5>
+          <p id="formToastText"></p>
         </div>
       </div>
     </div>
@@ -866,8 +881,9 @@
   <!-- main file -->
   <script src="assets/js/main.js" type="text/javascript"></script>
   <!-- sass -->
-  <script src="assets/js/pages/sass.js" type="text/javascript"></script>
-
+  <!-- <script src="assets/js/pages/sass.js" type="text/javascript"></script> -->
+  <!-- captcha v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfDpScjAAAAAAsgdRdxpdJOBZTlHiXJVRxVkrt0"></script>
 </body>
 
 </html>
